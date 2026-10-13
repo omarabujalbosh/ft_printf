@@ -20,6 +20,6 @@ int	put_pounter(void *s)
 	count = 0;
 	num = (long int)s;
 	count += write(1, "0x", 2);
-	count += put_hexa(num);
+	count += put_hexa(num, "123456789abcdef");
 	return (count);
 }

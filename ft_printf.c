@@ -18,7 +18,7 @@ static int	print_arg(char ch_arg, va_list arg)
 
 	count = 0;
 	if(ch_arg == 'c')
-		count = put_char(va_arg(arg, char));
+		count = put_char(va_arg(arg, int));
 	else if(ch_arg == 's')
 		count = put_str(va_arg(arg, char *));
 	else if(ch_arg == 'p')
@@ -33,6 +33,7 @@ static int	print_arg(char ch_arg, va_list arg)
 		count = put_hexa(va_arg(arg, unsigned int), "123456789ABCDEF");
 	else if(ch_arg == '%')
 		count = put_mod();
+	return (count);
 }
 
 int	ft_printf(const char *format, ...)
@@ -54,4 +55,5 @@ int	ft_printf(const char *format, ...)
 		count += write(1, &format[i], 1);
 	}
 	va_end(arg);
+	return (count);
 }

@@ -35,6 +35,6 @@ int	put_num(int n)
 	flag = 0;
 	if(n < 0)
 		flag = 1;
-	ft_putnpr_fd(n, 1);
+	ft_putnbr_fd(n, 1);
 	return (len(n, flag));
 }
