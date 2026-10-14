@@ -18,7 +18,7 @@
 
 int	ft_printf(const char *format, ...);
 int	put_char(char c);
-int	put_hexa(unsigned int n, char *s);
+int	put_hexa(unsigned long long n, char *s);
 int	put_pounter(void *s);
 int	put_num(int n);
 int	put_str(char *str);

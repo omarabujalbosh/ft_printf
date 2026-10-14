@@ -14,12 +14,17 @@
 
 int	put_pounter(void *s)
 {
-	long int num;
+	unsigned long long num;
 	int	count;
 
+	if (!s)
+	{
+		write(1, "(nil)", 5);
+		return (5);
+	}
 	count = 0;
-	num = (long int)s;
+	num = (unsigned long long)s;
 	count += write(1, "0x", 2);
-	count += put_hexa(num, "123456789abcdef");
+	count += put_hexa(num, "0123456789abcdef");
 	return (count);
 }

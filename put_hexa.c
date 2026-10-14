@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	put_hexa(unsigned int n, char *s)
+int	put_hexa(unsigned long long  n, char *s)
 {
 	char	mod;
 	int	c;
@@ -20,7 +20,7 @@ int	put_hexa(unsigned int n, char *s)
 	c = 0;
 	if (n >= 16)
 		c += put_hexa(n / 16, s);
-	mod = s[(n % 16) - 1];
+	mod = s[(n % 16)];
 	c += write(1, &mod, 1);
 	return (c);
 }

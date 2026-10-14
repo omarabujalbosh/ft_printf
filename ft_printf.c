@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <unistd.h>
 
 static int	print_arg(char ch_arg, va_list arg)
 {
@@ -28,11 +29,13 @@ static int	print_arg(char ch_arg, va_list arg)
 	else if(ch_arg == 'u')
 		count = put_unsigned_int(va_arg(arg, unsigned int));
 	else if(ch_arg == 'x')
-		count = put_hexa(va_arg(arg, unsigned int), "123456789abcdef");
+		count = put_hexa(va_arg(arg, unsigned long long), "0123456789abcdef");
 	else if(ch_arg == 'X')
-		count = put_hexa(va_arg(arg, unsigned int), "123456789ABCDEF");
+		count = put_hexa(va_arg(arg, unsigned int), "0123456789ABCDEF");
 	else if(ch_arg == '%')
 		count = put_mod();
+	else 
+		count = write(1, "%", 1) + write(1, &ch_arg, 1);
 	return (count);
 }
 
@@ -42,6 +45,8 @@ int	ft_printf(const char *format, ...)
 	int	i;
 	int	count;
 
+	if (!format)
+		return (-1);
 	i = 0;
 	count = 0;
 	va_start(arg, format);
@@ -51,8 +56,12 @@ int	ft_printf(const char *format, ...)
 		{
 			i++;
 			count += print_arg(format[i], arg);
+			i++;
 		}
+		if (!format[i])
+			break;
 		count += write(1, &format[i], 1);
+		i++;
 	}
 	va_end(arg);
 	return (count);
