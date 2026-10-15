@@ -1,0 +1,21 @@
+# _*_MAKEFILE_*_
+
+NAME = FT_PRINTF.A
+CC = CC
+CFLAG = -WALL -WEXTRA -WERROR
+
+SRC = FT_PRINTF.C PUT_CHAR.C PUT_HEXA.C PUT_MOD.C PUT_POUNTER.C PUT_PUTNUM.C PUT_STR.C PUT_UNSGINED_INT.C
+
+OBG = $(SRC:.C = .O)
+
+LIBFT_DIR = libft
+LIBFT = $(LIBFT_DIR)/libft.a
+
+all: $(NAME)
+
+$(NAME): $(OBG) $(LIBFT)
+	cp $(LIBFT) $(NAME)
+	ar -rcs $(NAME) $(OBG)
+
+$(LIBFT):
+	make -C $(LIBFT_DIR)
