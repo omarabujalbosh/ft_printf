@@ -16,6 +16,8 @@ static int	len(unsigned int n)
 {
 	int	count;
 
+	if(n == 0)
+		return (1);
 	count = 0;
 	while (n)
 	{
