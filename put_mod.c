@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int put_mod()
+int	put_mod(void)
 {
-  return (write(1, "%", 1));
+	return (write(1, "%", 1));
 }

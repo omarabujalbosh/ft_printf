@@ -16,7 +16,7 @@ static int	len(unsigned int n)
 {
 	int	count;
 
-	if(n == 0)
+	if (n == 0)
 		return (1);
 	count = 0;
 	while (n)
@@ -27,7 +27,7 @@ static int	len(unsigned int n)
 	return (count);
 }
 
-int	 put_unsigned_int(unsigned int n)
+int	put_unsigned_int(unsigned int n)
 {
 	char	mod;
 

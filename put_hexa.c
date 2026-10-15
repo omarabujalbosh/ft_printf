@@ -12,10 +12,10 @@
 
 #include "ft_printf.h"
 
-int	put_hexa(unsigned long long  n, char *s)
+int	put_hexa(unsigned int n, char *s)
 {
 	char	mod;
-	int	c;
+	int		c;
 
 	c = 0;
 	if (n >= 16)

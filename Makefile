@@ -1,6 +1,6 @@
 # _*_MAKEFILE_*_
 
-NAME = ft_printf.a
+NAME = libftprintf.a
 CC = cc
 CFLAG = -Wall -Wextra -Werror
 

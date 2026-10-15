@@ -11,11 +11,12 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdint.h>
 
 int	put_pounter(void *s)
 {
-	unsigned long long num;
-	int	count;
+	uintptr_t	num;
+	int					count;
 
 	if (!s)
 	{
@@ -23,7 +24,7 @@ int	put_pounter(void *s)
 		return (5);
 	}
 	count = 0;
-	num = (unsigned long long)s;
+	num = (uintptr_t)s;
 	count += write(1, "0x", 2);
 	count += put_hexa(num, "0123456789abcdef");
 	return (count);
