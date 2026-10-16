@@ -6,7 +6,7 @@
 /*   By: oabu-jal <oabu-jal@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 16:44:32 by oabu-jal          #+#    #+#             */
-/*   Updated: 2026/10/16 18:00:13 by oabu-jal         ###   ########.fr       */
+/*   Updated: 2026/10/16 18:16:13 by oabu-jal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,11 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (!format[i])
-				break;
-
 			count += print_arg(format[i], arg);
 			i++;
 		}
+		if (!format[i])
+			break ;
 		if (format[i] != '%')
 			count += write(1, &format[i++], 1);
 	}
