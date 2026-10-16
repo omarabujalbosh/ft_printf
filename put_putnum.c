@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   put_putnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omar </var/spool/mail/omar>                +#+  +:+       +#+        */
+/*   By: oabu-jal <oabu-jal@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/12 23:57:30 by omar              #+#    #+#             */
-/*   Updated: 2026/10/13 00:02:40 by omar             ###   ########.fr       */
+/*   Created: 2026/10/16 16:43:08 by oabu-jal          #+#    #+#             */
+/*   Updated: 2026/10/16 16:43:10 by oabu-jal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft/libft.h"
 #include "ft_printf.h"
