@@ -6,7 +6,7 @@
 /*   By: oabu-jal <oabu-jal@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 16:44:15 by oabu-jal          #+#    #+#             */
-/*   Updated: 2026/10/16 16:44:20 by oabu-jal         ###   ########.fr       */
+/*   Updated: 2026/10/16 17:23:14 by oabu-jal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdarg.h>
 # include <unistd.h>
-# include <stdint.h>
 
 int	ft_printf(const char *format, ...);
 int	put_char(char c);

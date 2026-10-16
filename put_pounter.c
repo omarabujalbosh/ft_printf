@@ -6,12 +6,10 @@
 /*   By: oabu-jal <oabu-jal@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 16:43:24 by oabu-jal          #+#    #+#             */
-/*   Updated: 2026/10/16 16:43:25 by oabu-jal         ###   ########.fr       */
+/*   Updated: 2026/10/16 17:47:45 by oabu-jal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "ft_printf.h"
-#include <stdint.h>
 
 static int	put_hexa_st(unsigned long long n, char *s)
 {

@@ -6,10 +6,9 @@
 /*   By: oabu-jal <oabu-jal@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 16:43:08 by oabu-jal          #+#    #+#             */
-/*   Updated: 2026/10/16 16:43:10 by oabu-jal         ###   ########.fr       */
+/*   Updated: 2026/10/16 17:48:06 by oabu-jal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft/libft.h"
 #include "ft_printf.h"
